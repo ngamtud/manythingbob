@@ -43,8 +43,23 @@
     }
 
     .button-container {
-      margin-top: 40px; /* Add more space between the third image and button */
-      transform: scale(2);
+      margin-top: 20px; /* Add more space between the third image and button */
+    }
+
+    .button-container button {
+      background-color: #008CBA; /* Change the button color */
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Media queries for responsive design */
+    @media (max-width: 768px) {
+      .col {
+        flex-basis: 100%; /* Change column width to full width on smaller screens */
+      }
     }
   </style>
 </head>
@@ -54,17 +69,17 @@
       <div class="col1">
         <img src="" alt="Image 1" id="image1">
       </div>
-      <div class="col1">
+      <div class="col2">
         <img src="" alt="Image 2" id="image2">
       </div>
     </div>
     <div class="row">
-      <div class="col2">
+      <div class="col">
         <img src="" alt="Image 3" id="image3">
       </div>
     </div>
     <div class="button-container">
-      <button id="next-button">NEXT ➡️ </button>
+      <button id="next-button">Next</button>
     </div>
   </div>
 
@@ -93,12 +108,12 @@
     var image3 = document.getElementById("image3");
     var button = document.getElementById("next-button");
 
-    // Generate and set initial random images
     var initialImages = [
-      getRandomItem(firstAndSecondImages),
-      getRandomItem(firstAndSecondImages),
-      getRandomItem(thirdImage)
+      firstAndSecondImages[0],
+      firstAndSecondImages[1],
+      thirdImage[0]
     ];
+
     image1.src = initialImages[0];
     image2.src = initialImages[1];
     image3.src = initialImages[2];
@@ -113,6 +128,12 @@
       image1.src = randomImages[0];
       image2.src = randomImages[1];
       image3.src = randomImages[2];
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.code === "Space") {
+        button.click();
+      }
     });
 
     function getRandomItem(array) {
