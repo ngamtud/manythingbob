@@ -14,73 +14,96 @@
     }
 
     .container {
-      text-align: center;
+      background-color: white;
     }
 
     .row {
       display: flex;
-      justify-content: center;
-      margin-bottom: 20px; /* Add more space between rows */
     }
 
-    .col1 {
-      flex-basis: 50%;
-      padding: 10px; /* Add padding */
-      margin-left: 50px;
-      margin-right: 50px;
-      margin-bottom: 10px;
-      /*float: inherit;*/
+    .l_eye_class {
+      text-align: right;
     }
 
-    .col2 {
-      flex-basis: 50%;
-      margin: 40px; /* Add padding */
+    .r_eye_class {
+      text-align: left;
+    }
+
+    .mouth_class {
+      text-align: center;
     }
 
     img {
-      width: 100%;
-      transform: scale(1.5); /* Increase the size of each image by 150% */
+      width: 45%;
+      transform: scale(1);
     }
 
     .button-container {
-      margin-top: 20px; /* Add more space between the third image and button */
+      margin-top: 20px;
+      text-align: center;
     }
 
     .button-container button {
-      background-color: #008CBA; /* Change the button color */
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
+      background-color: #fbeee0;
+      border: 2px solid #422800;
+      border-radius: 30px;
+      box-shadow: #422800 4px 4px 0 0;
+      color: #422800;
       cursor: pointer;
-      font-size: 16px;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 0 18px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
     }
 
-    /* Media queries for responsive design */
-    @media (max-width: 768px) {
-      .col {
-        flex-basis: 100%; /* Change column width to full width on smaller screens */
-      }
+    .button-container button:hover {
+      background-color: #fff;
     }
+
+    .version {
+      text-align: center;
+      color: #734808;
+      margin-top: 30px;
+    }
+
+    .other_text{
+      text-align: center;
+      color: #734808;
+      margin-top: 30px;
+    }
+
+
   </style>
 </head>
 <body>
   <div class="container">
     <div class="row">
-      <div class="col1">
+      <div class="l_eye_class" >
         <img src="" alt="Image 1" id="image1">
       </div>
-      <div class="col2">
+      <div class="r_eye_class">
         <img src="" alt="Image 2" id="image2">
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="mouth_class">
         <img src="" alt="Image 3" id="image3">
       </div>
     </div>
     <div class="button-container">
-      <button id="next-button">Next</button>
+      <button id="next-button">NEXT FACE</button>
     </div>
+    <p class="version">
+      <b>V2.2.0</b> by <b>manythingbob</b>
+      <a href="https://raw.githubusercontent.com/ngamtud/manythingbob/main/image/PRINT.jpg"> [Make your own cards]</a>
+    </p>
+    
   </div>
 
   <script>
@@ -117,7 +140,7 @@
     var initialImages = [
       L_eye[0],
       R_eye[1],
-      mouth[0]
+      mounth[0]
     ];
 
     image1.src = initialImages[0];
