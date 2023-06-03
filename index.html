@@ -84,23 +84,29 @@
   </div>
 
   <script>
-    var firstAndSecondImages = [
-      "https://cdn-icons-png.flaticon.com/128/159/159604.png",
-      "https://cdn-icons-png.flaticon.com/128/709/709612.png",
-      "https://cdn-icons-png.flaticon.com/128/2115/2115194.png",
-      "https://cdn-icons-png.flaticon.com/128/2531/2531412.png",
-      "https://cdn-icons-png.flaticon.com/128/6423/6423885.png",
-      "https://cdn-icons-png.flaticon.com/128/8860/8860683.png",
-      "https://cdn-icons-png.flaticon.com/128/10413/10413352.png"
+    var L_eye = [
+      "https://github.com/ngamtud/manythingbob/blob/main/image/L_eye_01.jpg",
+      "https://github.com/ngamtud/manythingbob/blob/main/image/L_eye_02.jpg",
+      "https://github.com/ngamtud/manythingbob/blob/main/image/L_eye_03.jpg",
+      "https://github.com/ngamtud/manythingbob/blob/main/image/L_eye_04.jpg",
+      "https://github.com/ngamtud/manythingbob/blob/main/image/L_eye_05.jpg",
+      "https://github.com/ngamtud/manythingbob/blob/main/image/L_eye_06.jpg",
     ];
-
-    var thirdImage = [
-      "https://cdn-icons-png.flaticon.com/128/2287/2287762.png",
-      "https://cdn-icons-png.flaticon.com/128/65/65565.png",
-      "https://cdn-icons-png.flaticon.com/128/3120/3120905.png",
-      "https://cdn-icons-png.flaticon.com/128/10277/10277038.png",
-      "https://cdn-icons-png.flaticon.com/128/10747/10747669.png",
-      "https://cdn-icons-png.flaticon.com/128/6724/6724557.png"
+    var R_eye = [
+    "https://github.com/ngamtud/manythingbob/blob/main/image/R_eye_01.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/R_eye_02.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/R_eye_03.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/R_eye_04.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/R_eye_05.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/R_eye_06.jpg",
+    ];
+    var mounth = [
+    "https://github.com/ngamtud/manythingbob/blob/main/image/mount_01.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/mount_02.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/mount_03.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/mount_04.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/mount_05.jpg",
+    "https://github.com/ngamtud/manythingbob/blob/main/image/mount_06.jpg",
     ];
 
     var image1 = document.getElementById("image1");
@@ -109,9 +115,9 @@
     var button = document.getElementById("next-button");
 
     var initialImages = [
-      firstAndSecondImages[0],
-      firstAndSecondImages[1],
-      thirdImage[0]
+      L_eye[0],
+      R_eye[1],
+      mouth[0]
     ];
 
     image1.src = initialImages[0];
@@ -120,9 +126,9 @@
 
     button.addEventListener("click", function() {
       var randomImages = [
-        getRandomItem(firstAndSecondImages),
-        getRandomItem(firstAndSecondImages),
-        getRandomItem(thirdImage)
+        getRandomItem(L_eye),
+        getRandomItem(R_eye),
+        getRandomItem(mounth)
       ];
 
       image1.src = randomImages[0];
